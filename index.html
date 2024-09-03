@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style> 
+            body{
+                text-align:center;
+                background-image: url(https://thumbs.dreamstime.com/b/morning-sunrise-top-moantain-morning-sunrise-top-moantain-sea-mist-fresh-nature-wallpapre-background-111216221.jpg);
+                 background-repeat: no-repeat;
+}
+            h3{
+                background-color:beige;
+}
+        </style>
+    </head>
+    <body>
+        <h3>DAY DIFFERENCE CALCULATOR</h3>
+        <label>Start Date</label>
+        <input type="date" id="one"></input>
+        <label>End Date</label>
+        <input type="date" id="two"></input>
+        <button onclick="demo()">Calculate</button>
+        <p id="a"></p>
+        <script>
+            function demo(){
+                let date1 = new Date(document.getElementById("one").value);
+                let date2 = new Date(document.getElementById("two").value);
+                let calc = date2 - date1;
+                let days = calc/(1000*60*60*24)
+                document.getElementById("a").innerHTML="The difference in days are: " + days + ".";
+            }
+        </script>
+    </body>
+</html>
